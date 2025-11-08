@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Theous</title>
+  <meta name="description" content="Theous — student and tech enthusiast. Selected projects, skills, and contact details." />
+  <style>
+    :root{
+      --bg:#0f1724; --card:#0b1220; --accent:#7c3aed; --muted:#94a3b8;
+      --glass: rgba(255,255,255,0.03);
+      --radius:12px;
+      color-scheme: dark;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background:linear-gradient(180deg,#ff53cb77 0%, #2c87ff77 60%);
+      color:#e6eef8;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      padding:30px;
+      display:grid;
+      align-items:flex-start;
+      justify-content:center;
+    }
+
+    .container{
+      width:120%;
+      max-width:1300px;
+      background:linear-gradient(240deg, #006eff, #ff26be);
+      border-radius:18px;
+      padding:28px;
+      box-shadow: 0 8px 30px rgba(2, 6, 23, 0.829);
+      backdrop-filter: blur(10px);
+    }
+
+    header{
+      display:flex;
+      gap:16px;
+      align-items:center;
+      justify-content:space-between;
+      margin-bottom:20px;
+    }
+
+    .brand{display:flex;gap:14px;align-items:center}
+    .logo{
+      width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#ffffff);
+      display:grid;place-items:center;font-weight:700;font-size:20px;
+      box-shadow: 0 6px 18px rgba(124,58,237,0.18);
+      overflow:hidden;
+    }
+    .logo img{width:100%;height:100%;object-fit:cover;display:block}
+
+    .hero{
+      display:flex;gap:26px;align-items:center;padding:18px;
+      background:var(--glass);border-radius:var(--radius);margin-bottom:22px;flex-wrap:wrap;
+    }
+    .intro{flex:1 1 320px;min-width:250px}
+    .intro h1{margin:0;font-size:28px;letter-spacing:-0.3px}
+    .intro p{color:var();margin:8px 0 0;font-size:15px;line-height:1.5}
+
+    .btn{padding:10px 14px;border-radius:10px;border:0;background:linear-gradient(90deg,var(--accent),#4c1d95);color:#fff;font-weight:600;cursor:pointer;text-decoration:none;font-size:14px;box-shadow:0 6px 16px rgba(124,58,237,0.18)}
+    .btn.secondary{background:transparent;border:1px solid rgba(255, 255, 255, 0);color:var();box-shadow:none}
+    .btn:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+    .avatar{width:110px;height:110px;border-radius:14px;background:linear-gradient(135deg,#0ea5a9,#ffffff);display:grid;place-items:center;font-weight:700;font-size:28px;color:#fff;flex:0 0 auto}
+
+    main{display:flex;flex-direction:column;gap:20px}
+
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.007));padding:18px;border-radius:12px}
+
+    .skills{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+    .chip{background:rgba(255,255,255,0.03);padding:8px 10px;border-radius:999px;font-size:13px;color:var();border:1px solid rgba(255, 255, 255, 0.02)}
+
+    .contact{display:flex;flex-direction:column;gap:10px}
+    .contact a{display:inline-flex;gap:10px;align-items:center;padding:10px;border-radius:10px;text-decoration:none;color:inherit;border:1px solid rgba(255,255,255,0.02);background:transparent}
+    .contact a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+    .contact p{margin:0;color:var();font-size:14px}
+
+    footer{margin-top:18px;color:var();font-size:13px;text-align:center}
+
+    @media (max-width:900px){
+      main{padding-bottom:12px}
+    }
+
+    .clock{display:flex;gap:10px;align-items:center;font-size:13px;color:var();flex-wrap:wrap}
+    .clock-item{background:rgba(255,255,255,0.02);padding:6px 10px;border-radius:8px}
+    .clock-diff{color:var();font-weight:600}
+
+    @media (prefers-reduced-motion: reduce){
+      .clock{transition:none}
+    }
+  </style>
+</head>
+<body>
+  <div class="container" role="main">
+    <header>
+      <div class="brand">
+        <div class="logo">
+          <img src="assets/logo.png" alt="Logo representing Theous." width="56" height="56" />
+        </div>
+        <div>
+          <div style="font-weight:700">Theous</div>
+          <div style="font-size:13px;color:var()">objectively the best website maker ever</div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="intro-title">
+        <div class="intro">
+          <h1 id="intro-title">Hi, name's Theous</h1>
+          <p>You can also call me Theo or Bibi. I'm currently in trade school and living my life at its peak.</p>
+        </div>
+      </section>
+
+      <section id="skills" class="card">
+        <h3 style="margin:0 0 10px 0">Skills</h3>
+        <div class="skills">
+          <span class="chip">Being Transgender</span>
+          <span class="chip">Eating Pepperoni Pizza</span>
+          <span class="chip">Freaky</span>
+          <span class="chip">Tech</span>
+          <span class="chip">Hardware</span>
+          <span class="chip">Gaming</span>
+        </div>
+      </section>
+
+      <section class="card contact" id="contact">
+        <h3 style="margin:0 0 8px 0">Contact</h3>
+        <p>I'm available after 6–7 PM on business days, completely available on the weekends. If you have any questions regarding me, my hobbies or my past, please let me know.</p>
+
+        <div class="clock" aria-live="polite" aria-atomic="true" role="status">
+          <div class="clock-item">Your time: <strong id="visitor-dt">--:--</strong></div>
+          <div class="clock-item">My time (Europe/Bucharest): <strong id="host-dt">--:--</strong></div>
+          <div class="clock-diff" id="time-diff">Calculating…</div>
+        </div>
+
+        <a href="mailto:theous@techie.com" aria-label="Send email to Theous">
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-heart-fill" viewBox="0 0 16 16">
+  <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555l-4.2 2.568-.051-.105c-.666-1.3-2.363-1.917-3.699-1.25-1.336-.667-3.033-.05-3.699 1.25l-.05.105zM11.584 8.91l-.073.139L16 11.8V4.697l-4.003 2.447c.027.562-.107 1.163-.413 1.767Zm-4.135 3.05c-1.048-.693-1.84-1.39-2.398-2.082L.19 12.856A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144L10.95 9.878c-.559.692-1.35 1.389-2.398 2.081L8 12.324l-.551-.365ZM4.416 8.91c-.306-.603-.44-1.204-.413-1.766L0 4.697v7.104l4.49-2.752z"/>
+  <path d="M8 5.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132"/>
+</svg>
+  theous@techie.com
+</a>
+
+<a href="https://steamcommunity.com/id/noloveforbibi/" aria-label="Steam profile" rel="noopener noreferrer">
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-steam" viewBox="0 0 16 16">
+  <path d="M.329 10.333A8.01 8.01 0 0 0 7.99 16C12.414 16 16 12.418 16 8s-3.586-8-8.009-8A8.006 8.006 0 0 0 0 7.468l.003.006 4.304 1.769A2.2 2.2 0 0 1 5.62 8.88l1.96-2.844-.001-.04a3.046 3.046 0 0 1 3.042-3.043 3.046 3.046 0 0 1 3.042 3.043 3.047 3.047 0 0 1-3.111 3.044l-2.804 2a2.223 2.223 0 0 1-3.075 2.11 2.22 2.22 0 0 1-1.312-1.568L.33 10.333Z"/>
+  <path d="M4.868 12.683a1.715 1.715 0 0 0 1.318-3.165 1.7 1.7 0 0 0-1.263-.02l1.023.424a1.261 1.261 0 1 1-.97 2.33l-.99-.41a1.7 1.7 0 0 0 .882.84Zm3.726-6.687a2.03 2.03 0 0 0 2.027 2.029 2.03 2.03 0 0 0 2.027-2.029 2.03 2.03 0 0 0-2.027-2.027 2.03 2.03 0 0 0-2.027 2.027m2.03-1.527a1.524 1.524 0 1 1-.002 3.048 1.524 1.524 0 0 1 .002-3.048"/>
+</svg>
+  Steam
+</a>
+
+<a href="https://open.spotify.com/user/31sasqvlcxzeuqzq2nnbxog4uabu" aria-label="Spotify profile" rel="noopener noreferrer">
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-spotify" viewBox="0 0 16 16">
+  <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0m3.669 11.538a.5.5 0 0 1-.686.165c-1.879-1.147-4.243-1.407-7.028-.77a.499.499 0 0 1-.222-.973c3.048-.696 5.662-.397 7.77.892a.5.5 0 0 1 .166.686m.979-2.178a.624.624 0 0 1-.858.205c-2.15-1.321-5.428-1.704-7.972-.932a.625.625 0 0 1-.362-1.194c2.905-.881 6.517-.454 8.986 1.063a.624.624 0 0 1 .206.858m.084-2.268C10.154 5.56 5.9 5.419 3.438 6.166a.748.748 0 1 1-.434-1.432c2.825-.857 7.523-.692 10.492 1.07a.747.747 0 1 1-.764 1.288"/>
+</svg>
+  Spotify
+</a>
+      </section>
+
+      <section class="card" style="margin-top:0">
+        <h4 style="margin:0 0 8px 0">Quick Bio</h4>
+<p style="margin:0;color:var();white-space:pre-line;">I'm really great with other people, especially online. I'm also really into tech, specifically computers and phones.
+Right now I'm currently using Windows 11 for work and gaming. I’ve daily-driven Ubuntu, Arch, EndeavourOS, CachyOS, Debian and VanillaOS before finally switching back to Windows.
+I use an ASUS X509JA VivoBook for school/light retro gaming and my phone is a Samsung Galaxy A54 5G running One UI 7.
+</p>
+
+      </section>
+    </main>
+
+    <footer>
+      © <span id="year"></span> Theous — Made with HTML, CSS and love!!
+    </footer>
+  </div>
+
+<script>
+(() => {
+  // --- Config
+  const hostTZ = 'Europe/Bucharest';
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // --- Elements
+  const yearEl = document.getElementById('year');
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+  const visitorEl = document.getElementById('visitor-dt');
+  const hostEl    = document.getElementById('host-dt');
+  const diffEl    = document.getElementById('time-diff');
+  if (!visitorEl || !hostEl || !diffEl) return;
+
+  // --- Cached formatters
+  const visitorFmt = new Intl.DateTimeFormat(undefined, {
+    weekday:'short', month:'short', day:'numeric',
+    hour:'numeric', minute:'2-digit', second:'2-digit'
+  });
+
+  const hostFmt = new Intl.DateTimeFormat(undefined, {
+    weekday:'short', month:'short', day:'numeric',
+    hour:'numeric', minute:'2-digit', second:'2-digit',
+    timeZone: hostTZ
+  });
+
+  // For offset math (fast + stable)
+  const hostDtf = new Intl.DateTimeFormat('en-US', {
+    timeZone: hostTZ,
+    year:'numeric', month:'2-digit', day:'2-digit',
+    hour:'2-digit', minute:'2-digit', second:'2-digit',
+    hour12:false
+  });
+
+  function tzOffsetMinutes(dtf, date){
+    // Interpret hostTZ wall time as UTC to derive offset vs real UTC
+    const parts = Object.fromEntries(
+      dtf.formatToParts(date).filter(p => p.type !== 'literal').map(p => [p.type, p.value])
+    );
+    const iso = `${parts.year}-${parts.month}-${parts.day}T${parts.hour}:${parts.minute}:${parts.second}Z`;
+    return Math.round((new Date(iso).getTime() - date.getTime()) / 60000);
+  }
+
+  function update(now = new Date()){
+    // Render clocks
+    visitorEl.textContent = visitorFmt.format(now);
+    hostEl.textContent    = hostFmt.format(now);
+
+    // Whole-minute math for robust differences
+    const visitorOffsetMin = -now.getTimezoneOffset();            // local offset (minutes, east=+)
+    const hostOffsetMin    = tzOffsetMinutes(hostDtf, now);       // host offset (minutes, east=+)
+    const diffMin          = hostOffsetMin - visitorOffsetMin;    // signed minutes
+
+    let text = 'SAME TIMEZONE?? PLEASE BMF!! :3';
+    if (diffMin !== 0){
+      const ahead = diffMin > 0;
+      const abs   = Math.abs(diffMin);
+      const h     = Math.floor(abs / 60);
+      const m     = abs % 60;
+      text = h && m ? `I'm ${h}h ${m}m ${ahead ? 'ahead of' : 'behind'} you!! :3`
+           : h      ? `I'm ${h} hour${h===1?'':'s'} ${ahead ? 'ahead of' : 'behind'} you!! :3`
+           :         `I'm ${m} min ${ahead ? 'ahead of' : 'behind'} you!! :3`;
+    }
+    diffEl.textContent = text;
+  }
+
+  // Aligned ticking (per second or per minute)
+  function tick(){
+    const now = new Date();
+    update(now);
+    const ms = now.getMilliseconds();
+    if (reduced){
+      // next minute boundary
+      const toNextMin = 60000 - (now.getSeconds()*1000 + ms);
+      setTimeout(tick, toNextMin);
+    } else {
+      // next second boundary
+      setTimeout(tick, 1000 - ms);
+    }
+  }
+
+  // If you keep aria-live on the clock container, consider `reduced = true` always.
+  tick();
+})();
+</script>
+
+</body>
+</html>
